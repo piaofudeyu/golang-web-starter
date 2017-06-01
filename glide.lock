@@ -1,6 +1,18 @@
-hash: 6086b8ea9a6fdcd5e5272a9b7953c89820981d351116685677e08860a5a5e996
-updated: 2017-06-02T00:06:53.657117067+08:00
+hash: a8d7f31420a94f0d398ef0cb994c83a037ed04e93fd34d67125c69866af04dcb
+updated: 2017-06-02T00:37:40.367411878+08:00
 imports:
+- name: github.com/jinzhu/gorm
+  version: 5174cc5c242a728b435ea2be8a2f7f998e15429b
+- name: github.com/onsi/ginkgo
+  version: 77a8c1e5c40d6bb6c5eb4dd4bdce9763564f6298
+  subpackages:
+  - ginkgo
+- name: github.com/onsi/gomega
+  version: 334b8f472b3af5d541c5642701c1e29e2126f486
+- name: github.com/sirupsen/logrus
+  version: ba1b36c82c5e05c4f912a88eab0dcd91a171688f
+- name: github.com/stretchr/testify
+  version: 69483b4bd14f5845b5a1e55bca19e954e827f1d0
 - name: gopkg.in/gin-gonic/gin.v1
   version: e2212d40c62a98b388a5eb48ecbdcf88534688ba
 testImports: []
