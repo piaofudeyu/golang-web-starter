@@ -1,0 +1,17 @@
+#!/bin/bash -e
+#
+# Publish go beego base Docker image
+
+cd $(dirname $0)/../base-image
+
+REPOSITORY="registry.cowbell.realestate.com.au/resi-rio/beego"
+
+VERSION=$(TZ=Australia/Melbourne date +'%Y%m%d%H%M')
+
+# Build the image
+docker build -t ${REPOSITORY}:${VERSION} .
+
+# Release to new registry
+docker push ${REPOSITORY}:${VERSION}
+docker tag ${REPOSITORY}:${VERSION} ${REPOSITORY}:latest
+docker push ${REPOSITORY}:latest
