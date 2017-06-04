@@ -1,16 +1,4 @@
 package: golang-web-starter
 import:
-- package: gopkg.in/gin-gonic/gin.v1
+- package: github.com/gin-gonic/gin
   version: ^1.1.4
-- package: github.com/stretchr/testify
-  version: ^1.1.4
-- package: github.com/onsi/ginkgo
-  version: ^1.3.1
-  subpackages:
-  - ginkgo
-- package: github.com/onsi/gomega
-  version: ^1.1.0
-- package: github.com/jinzhu/gorm
-  version: ^1.0.0
-- package: github.com/sirupsen/logrus
-  version: ^0.11.5
