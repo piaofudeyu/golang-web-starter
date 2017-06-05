@@ -1,23 +1,15 @@
 package router
 
 import (
-	"net/http"
 	"github.com/gin-gonic/gin"
+	"golang-web-starter/handler"
 )
 
 // Load loads the routes
 func Load() *gin.Engine  {
 	router := gin.Default()
 
-	router.GET("/", func(c *gin.Context) {
-		c.HTML(
-			http.StatusOK,
-			"index.html",
-			gin.H{
-				"title": "Hi",
-			},
-		)
-	})
+	router.GET("/", handler.ShowIndexPage)
 	return router
 }
 
