@@ -1,11 +1,10 @@
 #!/bin/bash -e
 #
-# Publish glide Docker image
+# Publish Postgres Base Docker image
+cd $(dirname $0)/../base-db
 
-cd $(dirname $0)/../base-image
-
-REPOSITORY=415148673/golang-web-base-image
-VERSION=$(TZ=Asia/Shanghai date +'%Y%m%d%H%M')
+REPOSITORY="415148673/postgres"
+VERSION='9.6'
 
 # Build the image
 docker build -t ${REPOSITORY}:${VERSION} .
