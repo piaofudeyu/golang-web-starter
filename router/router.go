@@ -10,6 +10,8 @@ func Load() *gin.Engine  {
 	router := gin.Default()
 
 	router.GET("/", handler.ShowIndexPage)
+	router.GET("/book/:book_id", handler.GetBook)
+
 	return router
 }
 

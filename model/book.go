@@ -1,5 +1,7 @@
 package model
 
+import "errors"
+
 type book struct {
 	ID     int `json:"id"`
 	Title  string `json:"title"`
@@ -21,4 +23,13 @@ var bookList = []book{
 
 func GetAllBooks() []book {
 	return bookList
+}
+
+func GetBookByID(id int) (*book, error) {
+	for _, book := range bookList {
+		if book.ID == id {
+			return &book, nil
+		}
+	}
+	return nil, errors.New("book not found")
 }

@@ -1,16 +1,18 @@
-<!--index.html-->
+<!doctype html>
+<html>
+	{{ template "header.html" .}}
 
-<!--Embed the header.html template at this location-->
-{{ template "header.html" .}}
+	<body class="container">
+		<!--Embed the menu.html template at this location-->
+		{{ template "menu.html" . }}
 
-<h1>Hi Tom!</h1>
+		{{range .books}}
+			<a href="/book/{{.ID}}">
+				<h2>{{.Title}}</h2>
+			</a>
+			<p>by {{.Author}}</p>
+		{{end}}
 
-{{range .books}}
-	<a href="/book/{.ID}">
-		<h2>{{.Title}}</h2>
-	</a>
-	<p>by {{.Author}}</p>
-{{end}}
-
-<!--Embed the footer.html template at this location-->
-{{ template "footer.html" .}}
+		{{ template "footer.html" .}}
+	</body>
+</html>
