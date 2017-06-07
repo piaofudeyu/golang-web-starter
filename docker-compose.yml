@@ -2,7 +2,7 @@ version: "3"
 
 services:
   dev:
-    depends_on:
+    links:
       - db
     image: 415148673/golang-web-base-image@sha256:5cebcc621de0143ac0ead941dd2eea248d02d92d7830516c1533ae63427a9d8f
     environment:

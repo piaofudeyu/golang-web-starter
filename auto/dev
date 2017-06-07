@@ -3,4 +3,4 @@
 cd $(dirname $0)/..
 
 docker-compose run --rm dev sh -c 'glide install'
-docker-compose run --service-ports --rm dev "${@-bash}"
+docker-compose up
