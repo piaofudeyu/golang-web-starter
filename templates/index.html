@@ -6,7 +6,7 @@
 		<!--Embed the menu.html template at this location-->
 		{{ template "menu.html" . }}
 
-		{{range .books}}
+		{{range .payload}}
 			<a href="/book/{{.ID}}">
 				<h2>{{.Title}}</h2>
 			</a>

@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	_ "github.com/gin-gonic/gin"
 	"golang-web-starter/router"
 )
 
