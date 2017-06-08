@@ -7,3 +7,4 @@ RUN tar -xf node-v6.9.1-linux-x64.tar.xz
 ENV PATH "$PATH:/usr/local/node-v6.9.1-linux-x64/bin/"
 RUN npm install -g yarn
 RUN curl https://glide.sh/get | sh
+RUN go get github.com/codegangsta/gin

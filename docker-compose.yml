@@ -4,8 +4,9 @@ services:
   dev:
     links:
       - db
-    image: 415148673/golang-web-base-image@sha256:5cebcc621de0143ac0ead941dd2eea248d02d92d7830516c1533ae63427a9d8f
+    image: 415148673/golang-web-base-image@sha256:2170bda5828e67cff10c91c5cfdfc38fec3807d518acde2a77eeee549440a0d1
     environment:
+      - PORT=8080
       - DB_USER=docker
       - DB_PASSWORD
       - DB_HOST=db
@@ -15,8 +16,8 @@ services:
 #      - golang-vender-cache:/go/src/golang-web-starter/vendor
     working_dir: /go/src/golang-web-starter
     ports:
-      - "8080:8080"
-    command: go run main.go
+      - "3000:3000"
+    command: gin
 
   db:
     image: 415148673/postgres@sha256:6d4800c53e68576e05d3a61f2b62ed573f40692bcc72a3ebef3b04b3986bb70c
