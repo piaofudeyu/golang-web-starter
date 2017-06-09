@@ -3,17 +3,17 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 	"golang-web-starter/models"
+	"golang-web-starter/utility"
 	"net/http"
 	"strconv"
-	"golang-web-starter/utility"
 )
 
-func ShowIndexPage(c *gin.Context)  {
+func ShowIndexPage(c *gin.Context) {
 	books := models.GetAllBooks()
 	utility.Render(
 		c,
 		gin.H{
-			"title": "Hi",
+			"title":   "Hi",
 			"payload": books,
 		},
 		"index.html",
@@ -26,7 +26,7 @@ func GetBook(c *gin.Context) {
 			utility.Render(
 				c,
 				gin.H{
-					"title": "Book",
+					"title":   "Book",
 					"payload": book,
 				},
 				"book.html",

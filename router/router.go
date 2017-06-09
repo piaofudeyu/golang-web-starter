@@ -6,7 +6,7 @@ import (
 )
 
 // Load loads the routes
-func Load() *gin.Engine  {
+func Load() *gin.Engine {
 	router := gin.Default()
 
 	router.GET("/", handler.ShowIndexPage)
@@ -14,4 +14,3 @@ func Load() *gin.Engine  {
 
 	return router
 }
-

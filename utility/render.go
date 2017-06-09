@@ -1,8 +1,8 @@
 package utility
 
 import (
-	"net/http"
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 // Render HTML, JSON or XML based on 'Accept' header of the request
