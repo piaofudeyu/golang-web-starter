@@ -11,6 +11,7 @@ func Load() *gin.Engine {
 
 	router.GET("/", handler.ShowIndexPage)
 	router.GET("/book/:book_id", handler.GetBook)
+	router.POST("/book", handler.SaveBook)
 
 	return router
 }

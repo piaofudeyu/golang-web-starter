@@ -6,21 +6,8 @@ import (
 
 type Book struct {
 	ID     int    `json:"id"`
-	Title  string `json:"title" gorm:"type:varchar(100);unique"`
-	Author string `json:"author" gorm:"type:varchar(100)"`
-}
-
-var bookList = []Book{
-	{
-		ID:     1,
-		Title:  "Getting To YES",
-		Author: "Roger Fisher",
-	},
-	{
-		ID:     2,
-		Title:  "You Don't Know JS",
-		Author: "Getify",
-	},
+	Title  string `form:"title" json:"title" gorm:"type:varchar(100);unique"`
+	Author string `form:"author" json:"author" gorm:"type:varchar(100)"`
 }
 
 func GetAllBooks() []Book {
@@ -33,4 +20,9 @@ func GetBookByID(id int) Book {
 	var book Book
 	utility.DB().First(&book, id)
 	return book
+}
+
+func SaveBook(book Book) Book {
+	utility.DB().Create(&book)
+	return book;
 }

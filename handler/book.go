@@ -37,3 +37,20 @@ func GetBook(c *gin.Context) {
 	}
 
 }
+
+func SaveBook(c *gin.Context)  {
+	var book models.Book
+	if err := c.Bind(&book); err == nil {
+		book := models.SaveBook(book)
+		utility.Render(
+			c,
+			gin.H{
+				"title": "Save",
+				"payload": book,
+			},
+			"success.html",
+		)
+	} else {
+		c.AbortWithError(http.StatusBadRequest, err)
+	}
+}
