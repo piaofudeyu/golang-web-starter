@@ -1,17 +1,16 @@
 package models
 
 import (
-	"errors"
 	"golang-web-starter/utility"
 )
 
-type book struct {
+type Book struct {
 	ID     int    `json:"id"`
 	Title  string `json:"title" gorm:"type:varchar(100);unique"`
 	Author string `json:"author" gorm:"type:varchar(100)"`
 }
 
-var bookList = []book{
+var bookList = []Book{
 	{
 		ID:     1,
 		Title:  "Getting To YES",
@@ -24,17 +23,14 @@ var bookList = []book{
 	},
 }
 
-func GetAllBooks() []book {
-	var books []book
+func GetAllBooks() []Book {
+	var books []Book
 	utility.DB().Find(&books)
 	return books
 }
 
-func GetBookByID(id int) (*book, error) {
-	for _, book := range bookList {
-		if book.ID == id {
-			return &book, nil
-		}
-	}
-	return nil, errors.New("book not found")
+func GetBookByID(id int) Book {
+	var book Book
+	utility.DB().First(&book, id)
+	return book
 }

@@ -22,18 +22,16 @@ func ShowIndexPage(c *gin.Context) {
 
 func GetBook(c *gin.Context) {
 	if bookID, err := strconv.Atoi(c.Param("book_id")); err == nil {
-		if book, err := models.GetBookByID(bookID); err == nil {
-			utility.Render(
-				c,
-				gin.H{
-					"title":   "Book",
-					"payload": book,
-				},
-				"book.html",
-			)
-		} else {
-			c.AbortWithError(http.StatusNotFound, err)
-		}
+		book := models.GetBookByID(bookID)
+		utility.Render(
+			c,
+			gin.H{
+				"title":   "Book",
+				"payload": book,
+			},
+			"book.html",
+		)
+
 	} else {
 		c.AbortWithError(http.StatusBadRequest, err)
 	}
