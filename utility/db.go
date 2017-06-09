@@ -1,11 +1,11 @@
 package utility
 
 import (
+	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
-	"fmt"
-	"os"
 	"log"
+	"os"
 )
 
 func DB() *gorm.DB {
