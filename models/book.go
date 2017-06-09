@@ -1,11 +1,14 @@
 package models
 
-import "errors"
+import (
+	"errors"
+	"golang-web-starter/utility"
+)
 
 type book struct {
 	ID     int    `json:"id"`
-	Title  string `json:"title"`
-	Author string `json:"author"`
+	Title  string `json:"title" gorm:"type:varchar(100);unique"`
+	Author string `json:"author" gorm:"type:varchar(100)"`
 }
 
 var bookList = []book{
@@ -22,7 +25,9 @@ var bookList = []book{
 }
 
 func GetAllBooks() []book {
-	return bookList
+	var books []book
+	utility.DB().Find(&books)
+	return books
 }
 
 func GetBookByID(id int) (*book, error) {

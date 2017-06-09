@@ -1,5 +1,5 @@
 hash: 3f4afe6fb3f49afd77cf39d1a03b4b0d3cd3f5cde6c1d07b02b483202e6d7515
-updated: 2017-06-09T08:16:51.248399683Z
+updated: 2017-06-09T14:22:40.140686899Z
 imports:
 - name: github.com/gin-gonic/gin
   version: e2212d40c62a98b388a5eb48ecbdcf88534688ba
@@ -12,19 +12,19 @@ imports:
   - proto
 - name: github.com/jinzhu/gorm
   version: 5174cc5c242a728b435ea2be8a2f7f998e15429b
+  subpackages:
+  - dialects/postgres
+- name: github.com/jinzhu/inflection
+  version: 1c35d901db3da928c72a72d8458480cc9ade058f
 - name: github.com/lib/pq
   version: 8837942c3e09574accbc5f150e2c5e057189cace
   subpackages:
+  - hstore
   - oid
 - name: github.com/manucorporat/sse
   version: ee05b128a739a0fb76c7ebd3ae4810c1de808d6d
 - name: github.com/mattes/migrate
   version: 035c07716cd373d88456ec4d701402df52584cb4
-  subpackages:
-  - database
-  - database/postgres
-  - source
-  - source/file
 - name: github.com/mattn/go-isatty
   version: fc9e8d8ef48496124e79ae0df75490096eccf6fe
 - name: golang.org/x/net
