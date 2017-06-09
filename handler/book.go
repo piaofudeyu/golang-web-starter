@@ -2,14 +2,14 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	"golang-web-starter/model"
+	"golang-web-starter/models"
 	"net/http"
 	"strconv"
 	"golang-web-starter/utility"
 )
 
 func ShowIndexPage(c *gin.Context)  {
-	books := model.GetAllBooks()
+	books := models.GetAllBooks()
 	utility.Render(
 		c,
 		gin.H{
@@ -22,7 +22,7 @@ func ShowIndexPage(c *gin.Context)  {
 
 func GetBook(c *gin.Context) {
 	if bookID, err := strconv.Atoi(c.Param("book_id")); err == nil {
-		if book, err := model.GetBookByID(bookID); err == nil {
+		if book, err := models.GetBookByID(bookID); err == nil {
 			utility.Render(
 				c,
 				gin.H{

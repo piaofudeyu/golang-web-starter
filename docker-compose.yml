@@ -4,11 +4,10 @@ services:
   dev:
     links:
       - db
-    image: 415148673/golang-web-base-image@sha256:2170bda5828e67cff10c91c5cfdfc38fec3807d518acde2a77eeee549440a0d1
+    image: 415148673/golang-web-base-image@sha256:18de5eb058a54b64f32d58b57a1eb3009b9ed49d90bd53056b95c5c8d5894cd6
     environment:
       - PORT=8080
       - DB_USER=docker
-      - DB_PASSWORD
       - DB_HOST=db
       - DB_NAME=webstarter
     volumes:
