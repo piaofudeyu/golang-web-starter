@@ -1,5 +1,5 @@
 CREATE TABLE books (
-  id      integer,
+  id      serial PRIMARY KEY,
   title   varchar(100),
   author  varchar(100)
 );
