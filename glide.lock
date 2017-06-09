@@ -1,5 +1,5 @@
-hash: 7c68208b3f4c915a805111a31a5d1c684cf58d961146cf17c826539350fb8943
-updated: 2017-06-07T16:41:25.238255205Z
+hash: c26f178ac982bb2ef73556e2528a202378e4968d4daeff67954f50a1e66ad65f
+updated: 2017-06-08T14:51:19.508509753Z
 imports:
 - name: github.com/gin-gonic/gin
   version: e2212d40c62a98b388a5eb48ecbdcf88534688ba
@@ -10,6 +10,8 @@ imports:
   version: 2402d76f3d41f928c7902a765dfc872356dd3aad
   subpackages:
   - proto
+- name: github.com/jinzhu/gorm
+  version: 5174cc5c242a728b435ea2be8a2f7f998e15429b
 - name: github.com/manucorporat/sse
   version: ee05b128a739a0fb76c7ebd3ae4810c1de808d6d
 - name: github.com/mattn/go-isatty
