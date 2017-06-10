@@ -5,7 +5,7 @@ import "testing"
 func TestGetAllBooks(t *testing.T) {
 	books := GetAllBooks()
 
-	if len(books) != len(bookList) {
+	if len(books) != 1 {
 		t.Fail()
 	}
 

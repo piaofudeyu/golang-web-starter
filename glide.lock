@@ -1,5 +1,5 @@
-hash: 3f4afe6fb3f49afd77cf39d1a03b4b0d3cd3f5cde6c1d07b02b483202e6d7515
-updated: 2017-06-09T14:22:40.140686899Z
+hash: beaa90071ee35606665f064841f4b4acf3d99671a9fc7bc4d79486a2443d6a96
+updated: 2017-06-10T05:24:41.056724817Z
 imports:
 - name: github.com/gin-gonic/gin
   version: e2212d40c62a98b388a5eb48ecbdcf88534688ba
@@ -27,6 +27,14 @@ imports:
   version: 035c07716cd373d88456ec4d701402df52584cb4
 - name: github.com/mattn/go-isatty
   version: fc9e8d8ef48496124e79ae0df75490096eccf6fe
+- name: github.com/smartystreets/goconvey
+  version: d4c757aa9afd1e2fc1832aaab209b5794eb336e1
+  subpackages:
+  - convey
+  - convey/gotest
+  - convey/reporting
+- name: github.com/stretchr/testify
+  version: 69483b4bd14f5845b5a1e55bca19e954e827f1d0
 - name: golang.org/x/net
   version: f315505cf3349909cdf013ea56690da34e96a451
   subpackages:
@@ -39,4 +47,15 @@ imports:
   version: c193cecd124b5cc722d7ee5538e945bdb3348435
 - name: gopkg.in/yaml.v2
   version: cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b
-testImports: []
+testImports:
+- name: github.com/gopherjs/gopherjs
+  version: dc374d32704510cb387457180ca9d5193978b555
+  subpackages:
+  - js
+- name: github.com/jtolds/gls
+  version: 77f18212c9c7edc9bd6a33d383a7b545ce62f064
+- name: github.com/smartystreets/assertions
+  version: 4ea54c1f28ad3ae597e76607dea3871fa177e263
+  subpackages:
+  - internal/go-render/render
+  - internal/oglematchers
